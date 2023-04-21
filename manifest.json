@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Hooking Chrome Extension",
+  "description": "Url & Clipboard Fetching Extension",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "dall-e-1.png"
+  },
+  "host_permissions": ["*://*/*"],
+  "permissions": ["tabGroups", "tabs"]
+}
