@@ -21,3 +21,34 @@ manifest.json에서
 ```
 
 으로 바꿔야할 것 같음
+
+https://developer.chrome.com/docs/extensions/reference/commands/
+단축키 추가
+
+https://developer.chrome.com/docs/extensions/reference/contextMenus/
+이건 우클릭했을 때 나오는 메뉴
+
+https://developer.chrome.com/docs/extensions/reference/declarativeContent/
+아마도 이게 웹페이지 내용 받아오는 것인듯함
+
+<!-- {
+"manifest_version": 3,
+"name": "Hooking Chrome Extension",
+"description": "Url & Clipboard Fetching Extension",
+"version": "1.0",
+"action": {
+"default_popup": "popup.html",
+"default_icon": "dall-e-1.png"
+},
+"background": {
+"service_worker": "background.js"
+},
+"content_scripts": [
+{
+"js": ["content.js"],
+"matches": ["*://*.instagram.com/*"]
+}
+],
+"host_permissions": ["*://*/*"],
+"permissions": ["tabs", "activeTab", "scripting"]
+} -->

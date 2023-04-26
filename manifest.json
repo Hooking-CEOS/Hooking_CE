@@ -3,10 +3,15 @@
   "name": "Hooking Chrome Extension",
   "description": "Url & Clipboard Fetching Extension",
   "version": "1.0",
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": "dall-e-1.png"
+  "background": {
+    "service_worker": "background.js"
   },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["*://*.instagram.com/*"]
+    }
+  ],
   "host_permissions": ["*://*/*"],
-  "permissions": ["tabGroups", "tabs"]
+  "permissions": ["tabs", "activeTab", "scripting"]
 }
